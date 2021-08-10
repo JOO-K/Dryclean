@@ -1,19 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+
     <head>
-        <title>OHT_Interactive</title>
+        <title>Dryclean®</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     </head>
 
     <body>
-<!--        OHT        -->
-       
-       
-    </body>
+        
+        <nav>
+            
+            <a><h1>Home</h1></a>
+            <a><h1>Work</h1></a>
+            <a><h1>Shop</h1></a>
+            <a><h1>Sale</h1></a>
+            <a><h1>About</h1></a>
+<!--
+            <a><h1>INSTA</h1></a>
+            <a><h1>TIK TOK</h1></a>
+-->
+            
+<!--
+            <h2>Dryclean®</h2>
+            <h2 id="recycle">♲</h2>
+            <h2 id="recycle">♲</h2>
+            <h2 id="recycle">♲</h2>
+-->
+            
+        </nav>
+
+        <div class="DCLogo">
+            <h1>Dryclean<span id="LogoR">®</span></h1>
+        </div>
+
+<!--
+        <div class="BGImage">
+
+            <img src="imgs/bigrockalone.jpg">
+
+        </div>
+-->
+
+        <!-- Swiper -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="imgs/bigrockalone.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="imgs/croppedbodyparts.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="imgs/daniellookingout.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="imgs/danielsittingonrock.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="imgs/ericthrowingrock.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
     
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        loop: true,
+        effect: "fade",
+        keyboard: {
+          enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+    </body>
+
 </html>
