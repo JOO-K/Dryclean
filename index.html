@@ -16,81 +16,92 @@
     </head>
 
     <body>
-        
+
         <nav>
-            
-            <a><h1>Home</h1></a>
-            <a><h1>Work</h1></a>
-            <a><h1>Shop</h1></a>
-            <a><h1>Sale</h1></a>
-            <a><h1>About</h1></a>
-<!--
-            <a><h1>INSTA</h1></a>
-            <a><h1>TIK TOK</h1></a>
--->
-            
-<!--
-            <h2>Dryclean®</h2>
-            <h2 id="recycle">♲</h2>
-            <h2 id="recycle">♲</h2>
-            <h2 id="recycle">♲</h2>
--->
-            
         </nav>
 
         <div class="DCLogo">
             <h1>Dryclean<span id="LogoR">®</span></h1>
         </div>
 
-<!--
-        <div class="BGImage">
+        <div class="gamecontainer"></div>
 
-            <img src="imgs/bigrockalone.jpg">
+        <div class="storecontainer">
 
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
--->
 
-        <!-- Swiper -->
-    <div class="swiper-container mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="imgs/bigrockalone.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="imgs/croppedbodyparts.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="imgs/daniellookingout.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="imgs/danielsittingonrock.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="imgs/ericthrowingrock.jpg" />
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-    
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        effect: "cube",
-        grabCursor: true,
-        loop: true,
-        effect: "fade",
-        keyboard: {
-          enabled: true,
-        },
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-      });
-    </script>
+
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                autoplay: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+        </script>
+
+
+
+
+
+        <script>
+            $(document).ready(function () {
+                $(".home").hover(
+                    function () {
+                        $().addClass("box-hover");
+                    },
+                    function () {
+                        $(this).removeClass("box-hover");
+                    }
+                );
+            });
+        </script>
 
     </body>
 
