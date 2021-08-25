@@ -25,17 +25,23 @@
 
 @font-face {
     font-family: GraphikReg;
-    src: url(./graphik/Graphik-Regular.otf);
+    src: url(./fonts/graphik/Graphik-Regular.otf);
+}
+
+@font-face {
+    font-family: Gaia;
+    src: url(./fonts/Gaia-Display.otf);
 }
 
 html,
 body {
     position: relative;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
-    background: #eee;
+    background-color: cadetblue;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -47,37 +53,151 @@ nav{
 
 }
 
-nav a{
+nav img{
+    filter: invert(1    );
+}
+
+#logo{
+    z-index: 1000;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 200px;
 
 }
 
-nav a h1{
-
-
+.navbar{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    height: 20px;
+    background-color: aliceblue;
+    display: flex;
 }
 
-nav a h1:hover{
-
+.navbar a{
+    text-decoration: none;
 }
 
-.DCLogo{
+.navbar h1{
+    z-index: 100000;
+    color: cadetblue;
+    font-family: ReplicaReg;
+    font-size: 23px;
+    line-height: 0px;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-top: 10px;
+    
+}
+
+nav h1{
+    display: none;
+    width: 200px;
+    z-index: 1000;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-family: Gaia;
+    font-size: 30px;
+    line-height: 43px;
+    word-spacing: -1px;
+    text-align: right;
+}
+
+nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+nav h1 a:hover{
+    text-decoration: underline;
+    color: orangered;
+}
+
+nav h3{
+    width: 250px;
+    z-index: 1000;
     position: absolute;
     top: 10px;
-    right: 14px;
-    z-index: 10000;
+    left: 20px;
+    font-family: "Space Mono";
+    font-size: 11px;
+    line-height: 19px;
+    word-spacing: -1px;
+    text-align: left;
 }
 
-.DCLogo h1{
-    font-family: ReplicaReg;
-    font-size: 56.55px;
-    margin: 0;
-    padding: 0;
+
+
+nav h4{
+    width: 250px;
+    z-index: 1000;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    font-family: "Space Mono";
+    font-size: 11px;
+    line-height: 19px;
+    word-spacing: -1px;
+    text-align: left;
+
 }
 
-#LogoR{
-    color: #ff4000;
-    animation: 10s restrictedrot infinite;
+nav h4 a{
+    text-decoration: none;
+    color: orangered;
 }
+
+.bgimage{
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bgimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#mydiv {
+    position: absolute;
+    width: 400px;
+    left: 75px;
+    bottom: 30%;
+    z-index: 9;
+    border: 1px solid white;
+    text-align: center;
+    border: none;
+}
+
+
+
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: orangered;
+    color: #fff;
+    border:none;
+}
+
+#mydiv button{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 26px;
+    height: 26px;
+    border: none;
+}
+
 
 @keyframes restrictedrot {
     0% {
@@ -88,40 +208,79 @@ nav a h1:hover{
     }
 }
 
-.gamecontainer{
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 50vw;
-    height: calc(100vh*(7.5/10));
-    background-color: red;
-}
-
-
-.storecontainer{
-    position: absolute;
-    bottom: 0px;
-    left; 0px;
-    width: 100vw;
-    height: 40vh;
-    background-color: blue;
-}
-
 .swiper-container {
-    width: 100vw;
-    height: 40vh;
+    position: absolute;
+    top: 75vh;
+    width: 100%;
+    height: 23%;
+    
 }
 
 .swiper-slide {
-    padding: 100px;
-    width: 300px;
+   
+    text-align: center;
+    font-size: 18px;
+    /*    background: rgba(0,0,0,0);*/
+    background-color: transparent;
+   
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
 }
 
 .swiper-slide img {
-
-    
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.3))
 }
+
+.swiper-slide img:hover{
+    filter: drop-shadow(0px 0px 10px blue);
+}
+
+.prodimgcontainer{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+}
+
+#desk{
+    display: none;
+}
+
+.prodimgcontainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#deskimg:hover ~ #desk{
+    display: block;
+}
+
+
+
+
+
+
+
+
 
 
 
