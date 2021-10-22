@@ -1,0 +1,291 @@
+@font-face {
+    font-family: Juliette;
+    src: url(./Juliette.otf);
+}
+
+@font-face {
+    font-family: Altima;
+    src: url(./fonts/Altima.otf);
+}
+
+@font-face {
+    font-family: FF7;
+    src: url(./fonts/Final_Fantasy_VII.ttf);
+}
+
+@font-face {
+    font-family: ReplicaReg;
+    src: url(./fonts/Replica-Regular.otf);
+}
+
+@font-face {
+    font-family: ReplicaBold;
+    src: url(./fonts/Replica-Bold.otf);
+}
+
+@font-face {
+    font-family: GraphikReg;
+    src: url(./fonts/graphik/Graphik-Regular.otf);
+}
+
+@font-face {
+    font-family: Gaia;
+    src: url(./fonts/Gaia-Display.otf);
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: cadetblue;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+
+}
+
+nav img{
+    filter: invert(1    );
+}
+
+#logo{
+    z-index: 1000;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    width: 200px;
+
+}
+
+.navbar{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60%;
+    height: 20px;
+    background-color: aliceblue;
+    display: flex;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar h1{
+    z-index: 100000;
+    color: cadetblue;
+    font-family: ReplicaReg;
+    font-size: 23px;
+    line-height: 0px;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-top: 10px;
+    
+}
+
+nav h1{
+    display: none;
+    width: 200px;
+    z-index: 1000;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-family: Gaia;
+    font-size: 30px;
+    line-height: 43px;
+    word-spacing: -1px;
+    text-align: right;
+}
+
+nav h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+nav h1 a:hover{
+    text-decoration: underline;
+    color: orangered;
+}
+
+nav h3{
+    width: 250px;
+    z-index: 1000;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: "Space Mono";
+    font-size: 11px;
+    line-height: 19px;
+    word-spacing: -1px;
+    text-align: left;
+}
+
+
+
+nav h4{
+    width: 250px;
+    z-index: 1000;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    font-family: "Space Mono";
+    font-size: 11px;
+    line-height: 19px;
+    word-spacing: -1px;
+    text-align: left;
+
+}
+
+nav h4 a{
+    text-decoration: none;
+    color: orangered;
+}
+
+.bgimage{
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bgimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#mydiv {
+    position: absolute;
+    width: 400px;
+    left: 75px;
+    bottom: 30%;
+    z-index: 9;
+    border: 1px solid white;
+    text-align: center;
+    border: none;
+}
+
+
+
+#mydivheader {
+    padding: 5px;
+    cursor: move;
+    z-index: 10;
+    background-color: orangered;
+    color: #fff;
+    border:none;
+}
+
+#mydiv button{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 26px;
+    height: 26px;
+    border: none;
+}
+
+
+@keyframes restrictedrot {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.swiper-container {
+    position: absolute;
+    top: 75vh;
+    width: 100%;
+    height: 23%;
+    
+}
+
+.swiper-slide {
+   
+    text-align: center;
+    font-size: 18px;
+    /*    background: rgba(0,0,0,0);*/
+    background-color: transparent;
+   
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.3))
+}
+
+.swiper-slide img:hover{
+    filter: drop-shadow(0px 0px 10px blue);
+}
+
+.prodimgcontainer{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40%;
+    height: 100%;
+}
+
+#desk{
+    display: none;
+}
+
+.prodimgcontainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#deskimg:hover ~ #desk{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

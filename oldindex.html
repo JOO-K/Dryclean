@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Dryclean®</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <img id="logo" src="imgs/DC_LOGO.png">
+
+            <h1>
+                <a href="index.html">about</a><br>
+                <a href="index.html">work</a><br>
+                <a href="index.html">shop</a><br>
+                <a href="index.html">media</a><br>
+            </h1>
+
+            <h3>
+                Dryclean Initiative&reg; 2021<br>
+                We are Dryclean Studio.<br>
+                Los Angeles, CA
+            </h3>
+
+            <h4>
+                <a href="index.html">dryclean@gmail.com</a><br>
+                <a href="index.html">@DrycleanStudio</a><br>
+                <a href="index.html">@Dryclean</a><br>
+            </h4>
+            
+        </nav>
+
+        <div class="navbar">
+                <a href="index.html"><h1>HOME</h1></a>
+                <a href="index.html"><h1>ABOUT</h1></a>
+                <a href="index.html"><h1>WORK</h1></a>
+                <a href="index.html"><h1>SHOP</h1></a>
+        </div>
+<!--
+<div class="DCLogo">
+<h1>Dryclean<span id="LogoR">®</span></h1>
+</div>
+-->
+        <!-- Draggable DIV -->
+<!--
+        <div id="mydiv">
+             Include a header DIV with the same name as the draggable DIV, followed by "header" 
+            <div id="mydivheader">Dryclean_Game</div>
+            <button>X</button>
+            <iframe src="https://i.simmer.io/@hyagogow/pong" width="400px" height="250px" id="game" frameBorder="0"></iframe>
+        </div>
+-->
+
+
+
+
+        <div class="bgimage">
+
+            <img src="imgs/danielsittingonrock.jpg">
+
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href=""><img src="imgs/PLSRS_0015_900x.png" id="deskimg"></a></div>
+                <div class="prodimgcontainer">
+                    <img class="" id="desk" src="imgs/bigrockalone.jpg">
+                </div>
+                <div class="swiper-slide"><a href=""><img src="imgs/EmptyName3_900x.png"></a></div>
+                <div class="swiper-slide"><a href=""><img src="imgs/EmptyName4_900x.png"></a></div>
+                <div class="swiper-slide"><a href=""><img src="imgs/0205_NEWORDER_0016_900x.png"></a></div>
+                <div class="swiper-slide"><a href=""><img src="imgs/BDGA_0221_900x.png"></a></div>
+                <div class="swiper-slide"><a href=""><img src="imgs/NEWO_LIFESTYLE_3_900x.png"></a></div>
+                
+                
+            </div>
+            <!--            <div class="swiper-pagination"></div>-->
+        </div>
+        
+        
+        
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                speed: 1000,
+                slidesPerView: 8,
+                spaceBetween: 0,
+                grabCursor: true,
+
+                followFinger: true,  
+                centeredSlides: true,
+                loop: true,
+                freeMode: true,
+                freeModeMomentum: true,
+                freeModeMomentumBounce: false,
+                freeModeMomentumRatio: .5,
+                freeModeMomentumVelocityRatio: .75,
+
+                //                lazy: true,
+                //                pagination: {
+                //                    el: ".swiper-pagination",
+                //                    clickable: true,
+                //                },
+                autoplay: {
+
+                    delay: 1000,
+
+                    pauseOnMouseEnter: true,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+
+        <script>
+            // Make the DIV element draggable:
+            dragElement(document.getElementById("mydiv"));
+
+            function dragElement(elmnt) {
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                if (document.getElementById(elmnt.id + "header")) {
+                    // if present, the header is where you move the DIV from:
+                    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                } else {
+                    // otherwise, move the DIV from anywhere inside the DIV:
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                }
+
+                function closeDragElement() {
+                    // stop moving when mouse button is released:
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
