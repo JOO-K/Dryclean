@@ -52,7 +52,7 @@ body {
     display: block;
     position: absolute;
     left: 50%;
-    top: 57%;
+    top: calc(45vh + 80px);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     filter: invert(1);
@@ -94,9 +94,84 @@ body {
     position: absolute;
     bottom: 0px;
     width: 100%;
-    height: 100%;;
-    background-color: salmon;
+    height: 60%;
+    background-color: #1F1F1F;
 
+}
+
+.maincontainer video{
+    object-fit: cover;
+    filter: sepia(0) brightness(0.4);
+}
+
+
+.textleft{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 280px;
+}
+
+.textleft h1{
+    color: white;
+    font-family: ReplicaReg;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: left;
+}
+
+.textright{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    
+}
+
+.textright h1{
+    color: white;
+    font-family: ReplicaReg;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: right;
+}
+
+.textmiddle{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    margin: 0 auto;
+   
+}
+
+.textmiddle h1{
+    color: white;
+    font-family: ReplicaBold;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.textmiddle img{
+    z-index: 10000;
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    
+}
+#teamphoto{
+    display: none;
+}
+
+
+.textmiddle:hover + #teamphoto{ 
+    display: block;
+}
+
+#Juliette{
+    font-family: Juliette;
 }
 
 
