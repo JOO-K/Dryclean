@@ -120,6 +120,15 @@ body {
     text-align: left;
 }
 
+.textleft h2{
+    color: white;
+    font-family: Gaia;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: left;
+}
+
+
 .textright{
     position: absolute;
     bottom: 20px;
