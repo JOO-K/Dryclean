@@ -70,30 +70,7 @@ function init() {
         
     
     
-    //Get your video element:
-        const video1 = document.getElementById('video1');
-        video1.autoplay = true;
-
-
-    //Create your video texture:
-        const videoTexture1 = new THREE.VideoTexture(video1);
-        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
-        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
     
-    
-    //Create screen
-        const screen1 = new THREE.CircleGeometry(122, 50);
-        const screen2 = new THREE.CircleGeometry(122, 50);
-        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
-        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
-        scene.add(videoScreen1);
-        videoScreen1.position.y = -30;
-        videoScreen1.rotation.x = 1.5708;
-        videoScreen1.rotation.z = 180;
-        scene.add(videoScreen2);
-        videoScreen2.position.y = -30;
-        videoScreen2.rotation.x = 1.5708;
-        videoScreen2.rotation.z = 180;
     
         
     

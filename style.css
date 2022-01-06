@@ -97,19 +97,19 @@ canvas {
 .nav h1{
     z-index: 10000;
     color: white;
-    background-color: orangered;
+    background-color: lawngreen;
     margin: 0px;
     padding: 0px;
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    filter: drop-shadow(0px 6px 5px black);
+    filter: drop-shadow(0px 6px 5px blue);
     transition: 0.5s;
 }
 
 .nav h1:hover {
     background-color: transparent;
-    color: orangered;
+    color: lawngreen;
 }
 
 .arrow-box-left{
