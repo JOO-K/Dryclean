@@ -47,6 +47,13 @@ a:link{
   text-decoration: none!important;
 }
 
+video{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 30%;
+}
+
 .scene,
 canvas {
     position: fixed;
@@ -86,7 +93,7 @@ canvas {
 
 
 
-.arrow-box h1{
+.nav h1{
     
     color: white;
     background-color: orangered;
@@ -99,26 +106,26 @@ canvas {
     transition: 0.5s;
 }
 
-.arrow-box h1:hover {
+.nav h1:hover {
     background-color: transparent;
     color: orangered;
 }
 
-.left{
+.arrow-box-left{
     position: fixed;
     top: 15px;
     left: 15px;
     z-index: 10000;
 }
 
-.center{
+.arrow-box-center{
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10000;
 }
 
-.right{
+.arrow-box-right{
     position: fixed;
     top: 15px;
     right: 15px;
