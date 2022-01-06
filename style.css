@@ -89,12 +89,13 @@ canvas {
 }
 
 .nav{
+    z-index: 10000;
 }
 
 
 
 .nav h1{
-    
+    z-index: 10000;
     color: white;
     background-color: orangered;
     margin: 0px;
