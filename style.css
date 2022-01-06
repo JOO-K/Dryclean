@@ -1,184 +1,83 @@
 @font-face {
-    font-family: Juliette;
-    src: url(./Juliette.otf);
+    font-family: Hatton;
+    src: url("fonts/Hatton-Medium.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Altima;
-    src: url(./fonts/Altima.otf);
+    font-family: Supply;
+    src: url("fonts/Supply-UltraLight.otf") format("opentype");
 }
 
 @font-face {
-    font-family: FF7;
-    src: url(./fonts/Final_Fantasy_VII.ttf);
+    font-family: Cirka;
+    src: url("fonts/Cirka-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: ReplicaReg;
-    src: url(./fonts/Replica-Regular.otf);
+    font-family: Haptik-Bold;
+    src: url("fonts/GT-Haptik-Bold-Trial.otf") format("opentype");
 }
 
-@font-face {
-    font-family: ReplicaBold;
-    src: url(./fonts/Replica-Bold.otf);
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
 }
 
-@font-face {
-    font-family: GraphikReg;
-    src: url(./fonts/graphik/Graphik-Regular.otf);
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-@font-face {
-    font-family: Gaia;
-    src: url(./fonts/Gaia-Display.otf);
+body::-webkit-scrollbar {
+  display: none;
 }
 
-html,
 body {
-    position: relative;
-    height: 100%;
-    overflow-x: hidden;
-    overflow: visible;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 }
 
+main {
+    z-index: 1;
+}
 
-.DCLogo{
-    z-index: 100;
-    display: block;
+a:link{
+  text-decoration: none!important;
+}
+
+.scene,
+canvas {
     position: absolute;
-    left: 50%;
-    top: 50px;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    filter: invert(0);
-}
-
-.DCLogo img{
-    width: 150px;
-
-}
-
-.presentation{
-
-}
-
-.reveal{
-    z-index: 10;  
-}
-
-.slides h3{
-    color: white;
-    font-family: ReplicaReg;
-    font-size: 65px;
-    line-height: 90px;
-}
-
-#typejs{
-    color: salmon;
-    text-decoration: salmon underline;
-}
-
-.maincontainer{
-    z-index: 0;  
-    bottom: 0px;
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
-}
-
-.maincontainer video{
-    filter: brightness(0.2);
-}
-
-.flexcontainer{
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: whitesmoke;
-}
-
-.flexcontainer > div {
-    background-color: transparent;
-    width: 250px;
-    margin: 10px;
-    /*  text-align: center;*/
-    font-size: 13px;
-    line-height: 17px;
-    font-family: GraphikReg;
-}
-
-#textleft{
-    text-align: left;
-}
-#textcenter{
-    text-align: center;
-}
-#textright{
-    text-align: right;
-}
-
-#teamphoto{
-    display: none;
-}
-
-
-#Juliette{
-    font-family: Juliette;
-}
-
-
-video{
-    object-fit: cover;
-    filter: sepia(.3) brightness(0.4);
-}
-
-.reveal .slides { margin: 0; }
-
-
-
-.background-image{
-    position: fixed;
-    width: 100%;
-    height: 90%;
-    bottom: 0px;
-    z-index: -1;
-}
-
-.background-image img{
-    object-fit: cover;
-}
-
-.imagecontainer{
-    width: 100%;
-    height: 80%;
-    background-color: red;
+    right: 0px;
+    overflow: hidden;
     z-index: 10;
 }
 
+.flex-container{
+    z-index: 1000;
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    bottom: -5px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
 
+.text-container{
+    width: 33.3%;
+    height: 10vw;
+    margin: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.text-container h1{
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+}
 
 
 
