@@ -21,7 +21,6 @@
     </head>
 
     <body>
-       
         <div class="nav">
             
             <div class="arrow-box-center">
@@ -30,6 +29,7 @@
             
         </div>
         
+<!--
         <div class="flex-container">
            <div class="text-container">
                <h1 id="khj1">eric joo</h1>
@@ -41,13 +41,20 @@
                <h1 id="khj3">eric joo</h1>
             </div>
         </div>
+-->
+        
+        
 
 
         <div class="three-container">
 
             <div class="scene"></div>
-            <video id="video1" playsinline webkit-playsinline muted loop autoplay width="200" height="200" src="images/Dryclean_RoadAnim_FL2.mp4" style="display: block;"></video>
+<!--            <video id="video1" playsinline webkit-playsinline muted loop autoplay width="200" height="200" src="images/Dryclean_RoadAnim_FL2.mp4" style="display: block;"></video>-->
 
+        </div>
+        
+        <div class="intro-container">
+            
         </div>
 
         <script>
@@ -110,6 +117,21 @@
                 .typeString('Welcome To Dryclean.')
                 .pauseFor(500)
                 .deleteAll(10)
+                .start();
+        </script>
+        
+        <script>
+            var app = document.getElementById('khj4');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 5,
+            });
+
+            typewriter
+                .typeString('Where are you?')
+                .pauseFor(1000)
+                .deleteAll(5)
                 .start();
         </script>
 

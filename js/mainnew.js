@@ -15,7 +15,7 @@ function init() {
 
 
   //Camera setup    
-  const fov = 100;
+  const fov = 90;
   const aspect = container.clientWidth * 1.0/ container.clientHeight * 1.0;
   const near = 0.1;
   const far = 5000;
@@ -70,13 +70,41 @@ function init() {
         
     
     
+    //Get your video element:
+        const video1 = document.getElementById('video1');
+        video1.autoplay = true;
 
+
+    //Create your video texture:
+        const videoTexture1 = new THREE.VideoTexture(video1);
+        const videoMaterial1a =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.BackSide, toneMapped: false} );
+        const videoMaterial1b =  new THREE.MeshBasicMaterial( {map: videoTexture1, side: THREE.FrontSide, toneMapped: false} );
+    
+    
+    //Create screen
+        const screen1 = new THREE.CircleGeometry(61 , 50);
+        const screen2 = new THREE.CircleGeometry(61, 50);
+        const videoScreen1 = new THREE.Mesh(screen1, videoMaterial1b,);
+        const videoScreen2 = new THREE.Mesh(screen2, videoMaterial1a,);
+        scene.add(videoScreen1);
+        videoScreen1.position.y = -30;
+        videoScreen1.rotation.x = 1.5708;
+        videoScreen1.rotation.z = 180;
+        scene.add(videoScreen2);
+        videoScreen2.position.y = -30;
+        videoScreen2.rotation.x = 1.5708;
+        videoScreen2.rotation.z = 180;
     
         
     
   //Load Models
   let loader = new THREE.GLTFLoader();
-
+    
+  loader.load("obj/spikering5.gltf", function(gltf) {
+    scene.add(gltf.scene);
+    spikering = gltf.scene;
+    animate();
+  });
     
   loader.load("obj/logo.gltf", function(gltf) {
     scene.add(gltf.scene);
@@ -101,11 +129,15 @@ function animate() {
 //  absform.scale.x += .0;
 //  tahoe.position.x += -40;
 //  deathvalley.position.x += 40;
- 
+  spikering.scale.x = 7;
+  spikering.scale.y = 7;
+  spikering.scale.z = 7;
+  spikering.position.y = -30;
+  spikering.rotation.y += .003;
     
-  logo.scale.x = 40;
-  logo.scale.y = 40;
-  logo.scale.z = 40;
+  logo.scale.x = 20;
+  logo.scale.y = 20;
+  logo.scale.z = 20;
   logo.position.y = -0;
   logo.rotation.y += -.003;
   

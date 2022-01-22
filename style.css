@@ -135,6 +135,25 @@ canvas {
     z-index: 10000;
 }
 
+.floating-text{
+    z-index: 200000;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    position: fixed;
+    top: 20%;
+    left: 8px;
+}
+
+.intro-container{
+    position: fixed;
+    bottom: 0px;
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+}
 
 
 
