@@ -66,6 +66,7 @@ canvas {
 }
 
 .flex-container{
+    display:none;
     z-index: 1000;
     position: fixed;
     width: 100vw;
@@ -115,14 +116,14 @@ canvas {
 
 .arrow-box-left{
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     left: 15px;
     z-index: 10000;
 }
 
 .arrow-box-center{
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10000;
@@ -130,7 +131,7 @@ canvas {
 
 .arrow-box-right{
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 15px;
     z-index: 10000;
 }
