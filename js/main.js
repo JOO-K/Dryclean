@@ -54,12 +54,12 @@ function init() {
 		var geometry = new THREE.CubeGeometry( 3000, 3000, 3000 );
 		var cubeMaterials =
 		[
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posx.jpg' ), side: THREE.DoubleSide } ), // Right side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negx.jpg' ), side: THREE.DoubleSide } ), // Left side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posy.jpg' ), side: THREE.DoubleSide } ), // Top side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/negz.jpg' ), side: THREE.DoubleSide } ), // Front side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/posz.jpg' ), side: THREE.DoubleSide } ) // Back side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposx.jpg' ), side: THREE.DoubleSide } ), // Right side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegx.jpg' ), side: THREE.DoubleSide } ), // Left side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposy.jpg' ), side: THREE.DoubleSide } ), // Top side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegz.jpg' ), side: THREE.DoubleSide } ), // Front side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposz.jpg' ), side: THREE.DoubleSide } ) // Back side
 		];    
     // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
@@ -103,11 +103,11 @@ function animate() {
 //  deathvalley.position.x += 40;
  
     
-  logo.scale.x = 40;
-  logo.scale.y = 40;
-  logo.scale.z = 40;
-  logo.position.y = -0;
-  logo.rotation.y += -.003;
+      logo.scale.x = 0;
+      logo.scale.y = 0;
+      logo.scale.z = 0;
+      logo.position.y = -0;
+      logo.rotation.y += -.003;
   
   
 
