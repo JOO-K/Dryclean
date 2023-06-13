@@ -129,6 +129,6 @@ window.addEventListener("resize", onWindowResize);
   controls.maxDistance = 5000;
   controls.enableZoom = true;
   controls.enablePan = true;
-controls.autoRotate = true;
+controls.autoRotate = false;
 controls.autoRotateSpeed = .5;
 
