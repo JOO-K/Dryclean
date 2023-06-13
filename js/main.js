@@ -21,7 +21,9 @@ function init() {
   const far = 5000;
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-  camera.position.set(0, 50, 250);
+  camera.position.set(0, 0,300);
+  
+    camera.lookAt(1000, -1010, 0.90);
 
   
   //Light setup
@@ -32,15 +34,6 @@ function init() {
   light.position.set(0, 500, 0);
   scene.add(light);
     
-  const light2 = new THREE.PointLight(0xfff000, 15);
-  light2.position.set(200, 0, -200);
-  light2.rotation.x += .005;
-  scene.add(light2);
-    
-  const light3 = new THREE.PointLight(0xfff000, 15);
-  light3.position.set(0, 0, 200);
-  light3.rotation.x += .005;
-  scene.add(light3);
     
   //Renderer
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
