@@ -105,6 +105,7 @@ function animate() {
   
 
   requestAnimationFrame(animate);
+         controls.update();
   renderer.render(scene, camera);
     
 }
@@ -128,5 +129,6 @@ window.addEventListener("resize", onWindowResize);
   controls.maxDistance = 5000;
   controls.enableZoom = true;
   controls.enablePan = true;
-
+controls.autoRotate = true;
+controls.autoRotateSpeed = .5;
 

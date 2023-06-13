@@ -22,6 +22,7 @@ function init() {
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.set(0, 50, 250);
+    camera.autoRotate
 
   
   //Light setup
@@ -54,12 +55,12 @@ function init() {
 		var geometry = new THREE.CubeGeometry( 3000, 3000, 3000 );
 		var cubeMaterials =
 		[
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposx.jpg' ), side: THREE.DoubleSide } ), // Right side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegx.jpg' ), side: THREE.DoubleSide } ), // Left side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposy.jpg' ), side: THREE.DoubleSide } ), // Top side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbownegz.jpg' ), side: THREE.DoubleSide } ), // Front side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Rainbowposz.jpg' ), side: THREE.DoubleSide } ) // Back side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacaposx.jpg' ), side: THREE.DoubleSide } ), // Right side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacanegx.jpg' ), side: THREE.DoubleSide } ), // Left side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacaposy.jpg' ), side: THREE.DoubleSide } ), // Top side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacanegy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacaposz.jpg' ), side: THREE.DoubleSide } ), // Front side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Larnacanegz.jpg' ), side: THREE.DoubleSide } ) // Back side
 		];    
     // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
@@ -104,15 +105,16 @@ function animate() {
 //  deathvalley.position.x += 40;
 
     
-  logo.scale.x = 40;
-  logo.scale.y = 40;
-  logo.scale.z = 40;
+  logo.scale.x = 0;
+  logo.scale.y = 0;
+  logo.scale.z = 0;
   logo.position.y = -0;
   logo.rotation.y += -.003;
   
   
 
   requestAnimationFrame(animate);
+     controls.update();
   renderer.render(scene, camera);
     
 }
@@ -136,5 +138,7 @@ window.addEventListener("resize", onWindowResize);
   controls.maxDistance = 500;
   controls.enableZoom = false;
   controls.enablePan = false;
+controls.autoRotate = true;
+controls.autoRotateSpeed = .5;
 
 

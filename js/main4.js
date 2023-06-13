@@ -22,22 +22,23 @@ function init() {
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.set(0, 50, 250);
+    camera.autoRotate
 
   
   //Light setup
   const ambient = new THREE.AmbientLight(0xffffff, 2);
   scene.add(ambient);
 
-  const light = new THREE.PointLight(0xffffff, 30);
+  const light = new THREE.PointLight(0x1ad1ff, 30);
   light.position.set(0, 500, 0);
   scene.add(light);
     
-  const light2 = new THREE.PointLight(0xffffff, 15);
+  const light2 = new THREE.PointLight(0xffa31a, 15);
   light2.position.set(200, 0, -200);
   light2.rotation.x += .005;
   scene.add(light2);
     
-  const light3 = new THREE.PointLight(0xcc0000, 15);
+  const light3 = new THREE.PointLight(0x1ad1ff, 15);
   light3.position.set(0, 0, 200);
   light3.rotation.x += .005;
   scene.add(light3);
@@ -54,12 +55,12 @@ function init() {
 		var geometry = new THREE.CubeGeometry( 3000, 3000, 3000 );
 		var cubeMaterials =
 		[
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creekposx.jpg' ), side: THREE.DoubleSide } ), // Right side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creeknegx.jpg' ), side: THREE.DoubleSide } ), // Left side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creekposy.jpg' ), side: THREE.DoubleSide } ), // Top side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creeknegy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creeknegz.jpg' ), side: THREE.DoubleSide } ), // Front side
-			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Creekposz.jpg' ), side: THREE.DoubleSide } ) // Back side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchposx.jpg' ), side: THREE.DoubleSide } ), // Right side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchnegx.jpg' ), side: THREE.DoubleSide } ), // Left side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchposy.jpg' ), side: THREE.DoubleSide } ), // Top side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchnegy.jpg' ), side: THREE.DoubleSide } ), // Bottom side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchposz.jpg' ), side: THREE.DoubleSide } ), // Front side
+			new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader( ).load( 'images/Churchnegz.jpg' ), side: THREE.DoubleSide } ) // Back side
 		];    
     // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
 		var cubeMaterial = new THREE.MeshFaceMaterial( cubeMaterials );
@@ -71,6 +72,7 @@ function init() {
     
     
    
+    
         
     
   //Load Models
@@ -103,15 +105,16 @@ function animate() {
 //  deathvalley.position.x += 40;
 
     
-  logo.scale.x = 40;
-  logo.scale.y = 40;
-  logo.scale.z = 40;
+  logo.scale.x = 0;
+  logo.scale.y = 0;
+  logo.scale.z = 0;
   logo.position.y = -0;
   logo.rotation.y += -.003;
   
   
 
   requestAnimationFrame(animate);
+     controls.update();
   renderer.render(scene, camera);
     
 }
@@ -135,5 +138,6 @@ window.addEventListener("resize", onWindowResize);
   controls.maxDistance = 500;
   controls.enableZoom = false;
   controls.enablePan = false;
-
+controls.autoRotate = true;
+controls.autoRotateSpeed = .5;
 
