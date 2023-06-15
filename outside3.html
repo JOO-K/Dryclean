@@ -29,6 +29,17 @@
         </div>
         
       
+      <div class="flex-container">
+           <div class="text-container">
+               <h1 id="khj1"></h1>
+           </div>
+           <div class="text-container">
+               <h1 id="khj2">eric joo</h1>
+           </div>
+           <div class="text-container">
+               <h1 id="khj3"></h1>
+            </div>
+        </div>
 
 
         <div class="three-container">
@@ -38,6 +49,22 @@
 
         </div>
 
+      <script>
+            var app = document.getElementById('khj2');
+
+            var typewriter = new Typewriter(app, {
+                loop: true,
+                delay: 5,
+            });
+
+            typewriter
+                .typeString('She learns to transform the small "I" into the total self."')
+                .pauseFor(2000)
+                .deleteAll(5)
+              
+                .start();
+        </script>
+        
       
 
         <script src=js/three.min.js></script>
